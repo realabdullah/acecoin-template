@@ -64,7 +64,7 @@ html {
   }
 
   &__container {
-    margin-top: 6rem;
+    margin-top: 4rem;
     
     form {
 
@@ -135,9 +135,96 @@ html {
             border: .125rem solid $input-border;
             border-radius: 5px;
             outline: $active-border;
+
+            &:focus {
+              background: #edf3ff;
+              border: 2px solid $active-border;
+            }
+          }
+        }
+
+        &.cvv {
+          @include setFlex (flex, center, space-between, initial);
+          flex-wrap: wrap;
+
+          .input__header {
+            margin-bottom: 0;
+          }
+
+          .card__input__div {
+            @include setFlex (flex, center, space-between, initial);
+            width: 400px;
+
+            .forward__slash {
+              font-size: 1rem;
+              font-weight: 800;
+              color: $text_one;
+              margin: 0 1rem;
+            }
+          }
+
+          .card__input {
+            width: 400px;
+            margin-top: 0;
+
+            input {
+              text-align: center;
+              padding-left: 0;
+              padding-right: 0;
+              background: none;
+              color: $active-border;
+
+              &:focus {
+                background: #edf3ff;
+                border: 2px solid $active-border;
+              }
+            }
+
+            input[type="password"] {
+              text-align: left;
+              padding-left: 1.5rem;
+              letter-spacing: .5rem;
+            }
+
+            .dots__icon {
+              position: absolute;
+              top: 50%;
+              transform: translate(0, -50%);
+              height: 1.5rem;
+              opacity: .35;
+              right: 15px;
+            }
           }
         }
       }
+
+      .submit__btn {
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: .5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        background: $blue_bg;
+        color: #fff;
+
+        &:hover {
+          background-color: $active-border;
+        }
+      }
     }
+  }
+}
+
+@media(max-width: 730px) {
+  .form__container form .input__div.cvv .card__input {
+    width: 100%;
+    margin-top: 7px;
+  }
+}
+
+@media(max-width: 700px) {
+  .card__input__div {
+    width: 100% !important;
+    margin-top: 7px;
   }
 }
