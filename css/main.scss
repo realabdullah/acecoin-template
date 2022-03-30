@@ -62,4 +62,82 @@ html {
       }
     }
   }
+
+  &__container {
+    margin-top: 6rem;
+    
+    form {
+
+      .input__div {
+        margin-bottom: 2rem;
+
+        .input__header {
+          @include setFlex (flex, center, space-between, initial);
+          margin-bottom: 1.7rem;
+
+          .description {
+
+            .title {
+              font-size: 1rem;
+              font-weight: 700;
+              color: $text_one;
+              margin-bottom: .3rem;
+            }
+
+            .instruction {
+              font-size: .8rem;
+              font-weight: 500;
+              color: $text_two;
+            }
+          }
+
+          .edit__btn {
+            @include setFlex (flex, center, space-between, initial);
+            color: $oth_blue;
+
+            svg {
+              fill: $oth_blue;
+              height: 1rem;
+            }
+
+            .btn__title {
+              margin-left: .5rem;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .card__input {
+          margin-top: 1rem;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            &.card__icon {
+              left: 10px;
+              height: 2rem;
+            }
+
+            &.verified__icon {
+              right: 15px;
+              height: 1.5rem;
+            }
+          }
+
+          input {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 1rem 4rem;
+            border: .125rem solid $input-border;
+            border-radius: 5px;
+            outline: $active-border;
+          }
+        }
+      }
+    }
+  }
 }
