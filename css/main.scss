@@ -215,6 +215,124 @@ html {
   }
 }
 
+.checkout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  margin: 0 4rem;
+  margin-top: 8.5rem;
+  background: #e9eef1;
+  border-radius: 10px;
+
+  .card {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    top: -10rem;
+
+    .blue__div {    
+      position: relative;
+      top: 1.2rem;
+      z-index: -999;
+      width: 80px;
+      height: 30px;
+      background: $blue_bg;
+      margin: 0 auto;
+      border-radius: 7px;
+    }
+
+    .virtual__card {
+      @include setFlex (flex, stretch, space-between, column);
+      background: #f9fafc;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      box-shadow: #64646f33 0px 7px 29px 0px;
+      backdrop-filter: blur(15px);
+
+      .card__chips {
+        @include setFlex (flex, center, space-between, initial);
+
+        .chip {
+          height: 50px;
+        }
+
+        .wifi {
+          height: 30px;
+        }
+      }
+
+      .card__details {
+        margin-top: 6rem;
+
+        .card__owner {
+          @include setFlex (flex, flex-start, flex-start, column);
+
+          .card__name {
+            font-size: 1rem;
+            font-weight: 500;
+            color: $dark_bg;
+            margin-bottom: 5px;
+          }
+
+          .pin {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: $dark_bg;
+          }
+        }
+
+        .card__cvvlogo {
+          @include setFlex (flex, center, space-between, initial);
+          margin-top: 2rem;
+
+          .cvv__number {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $dark_bg;
+          }
+
+          img {
+            width: 50px;
+          }
+        }
+      }
+    }
+
+    .checkout__details {
+      margin-top: 4rem;
+
+      .checkout__data {
+        @include setFlex (flex, center, space-between, initial);
+        margin-top: 7px;
+
+        .data__name {
+          font-size: 1rem;
+          font-weight: 600;
+          color: $text_two;
+        }
+
+        .data__detail {
+          @include setFlex (flex, center, space-between, initial);
+
+          img {
+            width: 20px;
+            margin-right: 10px;
+          }
+
+          .data__value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $dark_bg;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
 @media(max-width: 730px) {
   .form__container form .input__div.cvv .card__input {
     width: 100%;
