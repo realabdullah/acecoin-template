@@ -1,2 +1,65 @@
 @import '_variables.scss';
 @import '_mixins.scss';
+
+html {
+  font-size: 1rem;
+  font-family: $poppins;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+  padding-top: 6rem;
+  position: relative;
+}
+
+.form {
+
+  &__header {
+    @include setFlex (flex, center, space-between, initial);
+
+    .logo {
+      @include setFlex (flex, center, space-between, initial);
+
+      &__circle {
+        width: 2.7rem;
+        height: 2.7rem;
+        display: block;
+        background: $blue_bg;
+        border-radius: 50%;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-left: .5rem;
+        color: $text_one;
+
+        .slim__text {
+          font-weight: 300;
+        }
+      }
+    }
+
+    .time {
+      font-size: 1.3rem;
+      font-weight: 500;
+
+      &__box {
+        @include setFlex (inline-flex, center, center, initial);
+        background: $dark_bg;
+        color: #fff;
+        width: 1.2em;
+        height: 1.7rem;
+        border-radius: 5px;
+        margin-left: -3px;
+      }
+
+      &__column {
+        position: relative;
+        right: 2px;
+      }
+    }
+  }
+}
