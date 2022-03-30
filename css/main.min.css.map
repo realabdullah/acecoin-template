@@ -1,8 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,AAAC,CACA,MAAM,CAAE,CAAC,CACV",
+    "mappings": "",
     "sources": [
-        "main.scss"
+        "main.scss",
+        "_variables.scss",
+        "_mixins.scss"
     ],
     "names": [],
     "file": "main.min.css"
